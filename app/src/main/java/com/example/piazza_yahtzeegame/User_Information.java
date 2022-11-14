@@ -44,6 +44,7 @@ public class User_Information extends AppCompatActivity {
         editIntent = new Intent(User_Information.this, edit_delete.class);
 
         startGame();
+
         editUser();
     }
 
