@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     EditText unlogin;
     EditText passlogin;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Intent logIntent;
     Intent newIntent;
 
+    ArrayList<Users> uList;
     UserDatabase dbHelp;
 
     @Override
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     passlogin.setError("Forgot to Enter Password");
                     return;
                 }
-
+                logIntent.putExtra("Users", uList.get(i));
                 startActivity(logIntent);
             }
         });
