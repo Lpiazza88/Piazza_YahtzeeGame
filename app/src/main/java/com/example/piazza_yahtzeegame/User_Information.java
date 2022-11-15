@@ -38,7 +38,7 @@ public class User_Information extends AppCompatActivity {
 
         KeyUsername = findViewById(R.id.tv_kun);
 
-        KeyUsername.setText(userPassed.getUname());
+        /*KeyUsername.setText(userPassed.getUname());*/
 
         gameIntent = new Intent(User_Information.this, Play_Game.class);
         editIntent = new Intent(User_Information.this, edit_delete.class);

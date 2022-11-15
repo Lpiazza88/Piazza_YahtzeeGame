@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -61,8 +62,20 @@ public class MainActivity extends AppCompatActivity {
                     passlogin.setError("Forgot to Enter Password");
                     return;
                 }
-                logIntent.putExtra("Users", uList.get(i));
-                startActivity(logIntent);
+                Log.d("user", u);
+                Log.d("pass", p);
+
+                for(int i=0;i<uList.size();i++){
+                    if (u.equals(uList) && p.equals(uList)){
+                        startActivity(logIntent);
+                    }
+                    else{
+                        passlogin.setError("Wrong Password");
+                        return;
+                    }
+                }
+
+
             }
         });
     }

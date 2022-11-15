@@ -106,13 +106,23 @@ public class Create_New extends AppCompatActivity {
                     NewPass2.setError("No Match");
                     return;
                 }
+                for(int i=0; i<uList.size();i++){
+                    if(u.equals(uList.get(i).getUname())){
+                        NewUn.setError("Username Taken, try again.");
+                        return;
+                    }
+                }
+                Log.d("checks", u);
+                Log.d("checks", f);
+                Log.d("checks", l);
+                Log.d("checks", p);
+                Log.d("checks", e);
 
                 Users users = new Users(u,f,l,p,e);
-
+                Log.d("Array", dbHelp.getAllRows()+"");
                 addNewUsers(users);
-
+                Log.d("Array2", uList.get(3).getUname()+"");
                 uList.add(users);
-
                 startActivity(confirmAdd);
             }
         });

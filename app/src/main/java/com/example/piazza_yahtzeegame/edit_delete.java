@@ -57,7 +57,7 @@ public class edit_delete extends AppCompatActivity {
 
         userPassed=(Users) cameFrom.getSerializableExtra("Users");
 
-        UserKey.setText(userPassed.getUname());
+        /*UserKey.setText(userPassed.getUname());*/
         editFn.setText(userPassed.getFname());
         editLn.setText(userPassed.getLname());
         editEmail.setText(userPassed.getEmail());
