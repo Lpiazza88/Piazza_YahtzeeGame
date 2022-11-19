@@ -28,8 +28,8 @@ public class User_Information extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_information);
 
-        dbHelp=new UserDatabase(this);
-        Intent cameFrom= getIntent();
+        dbHelp = new UserDatabase(this);
+        Intent cameFrom = getIntent();
         userPassed = (Users) cameFrom.getSerializableExtra("Users");
         PlayBtn = findViewById(R.id.Btn_Play);
         EditBtn = findViewById(R.id.Btn_Edit);
@@ -38,10 +38,12 @@ public class User_Information extends AppCompatActivity {
 
         KeyUsername = findViewById(R.id.tv_kun);
 
-        /*KeyUsername.setText(userPassed.getUname());*/
+        KeyUsername.setText(userPassed.getUname());
 
         gameIntent = new Intent(User_Information.this, Play_Game.class);
         editIntent = new Intent(User_Information.this, edit_delete.class);
+        gameIntent.putExtra("Users", userPassed);
+        editIntent.putExtra("Users", userPassed);
 
         startGame();
 

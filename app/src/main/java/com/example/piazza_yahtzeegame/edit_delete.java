@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -53,11 +54,10 @@ public class edit_delete extends AppCompatActivity {
 
         UserKey = (TextView) findViewById(R.id.tv_unk);
 
-        Intent cameFrom=getIntent();
+        Intent cameFrom = getIntent();
 
-        userPassed=(Users) cameFrom.getSerializableExtra("Users");
-
-        /*UserKey.setText(userPassed.getUname());*/
+        userPassed = (Users) cameFrom.getSerializableExtra("Users");
+        UserKey.setText(userPassed.getUname());
         editFn.setText(userPassed.getFname());
         editLn.setText(userPassed.getLname());
         editEmail.setText(userPassed.getEmail());
@@ -66,6 +66,8 @@ public class edit_delete extends AppCompatActivity {
         returnIntent = new Intent(edit_delete.this, User_Information.class);
         confirmSave = new Intent(edit_delete.this, User_Information.class);
         userDelete = new Intent (edit_delete.this, MainActivity.class);
+        confirmSave.putExtra("Users", userPassed);
+        userDelete.putExtra("Users", userPassed);;
         goBack();
         saveUser();
         deleteUser();

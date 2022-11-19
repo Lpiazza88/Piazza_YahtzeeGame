@@ -29,7 +29,7 @@ public class Create_New extends AppCompatActivity {
     Intent canAdd;
 
     ArrayList<Users> uList;
-
+    Users userPassed;
     UserDatabase dbHelp;
 
     @Override
@@ -39,7 +39,8 @@ public class Create_New extends AppCompatActivity {
 
         dbHelp = new UserDatabase(this);
         dbHelp.initializeDB();
-
+        Intent cameFrom = getIntent();
+        userPassed = (Users) cameFrom.getSerializableExtra("Users");
         NewUn = findViewById(R.id.et_newun);
         NewFn= findViewById(R.id.et_newfn);
         NewLn= findViewById(R.id.et_newln);
@@ -54,6 +55,7 @@ public class Create_New extends AppCompatActivity {
 
         confirmAdd=new Intent(Create_New.this, User_Information.class);
         canAdd=new Intent(Create_New.this, MainActivity.class);
+        confirmAdd.putExtra("Users", userPassed);
 
         Log.d("Number of Records:", dbHelp.numberOfRowsInTable()+"");
 
@@ -119,10 +121,9 @@ public class Create_New extends AppCompatActivity {
                 Log.d("checks", e);
 
                 Users users = new Users(u,f,l,p,e);
-                Log.d("Array", dbHelp.getAllRows()+"");
                 addNewUsers(users);
-                Log.d("Array2", uList.get(3).getUname()+"");
                 uList.add(users);
+                confirmAdd.putExtra("Users", users);
                 startActivity(confirmAdd);
             }
         });

@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     
     ImageView Logbtn;
     ImageView Newbtn;
-
+    Users userPassed;
     Intent logIntent;
     Intent newIntent;
 
@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         
         unlogin = findViewById(R.id.ET_Lun);
         passlogin = findViewById(R.id.ET_Lpass);
+        Intent cameFrom = getIntent();
+        userPassed = (Users) cameFrom.getSerializableExtra("Users");
 
         Logbtn = findViewById(R.id.Btn_Log);
         Newbtn = findViewById(R.id.btn_new);
@@ -74,8 +76,6 @@ public class MainActivity extends AppCompatActivity {
                         return;
                     }
                 }
-
-
             }
         });
     }
