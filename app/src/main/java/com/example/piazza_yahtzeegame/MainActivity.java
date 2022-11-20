@@ -41,22 +41,30 @@ public class MainActivity extends AppCompatActivity {
 
         logIntent = new Intent(MainActivity.this, User_Information.class);
         newIntent = new Intent(MainActivity.this, Create_New.class);
+        logIntent.putExtra("Users", userPassed);
+
 
         dbHelp = new UserDatabase(this);
 
         UserLogin();
         CreateNew();
+        fillArrayList();
+    }
+
+    public void fillArrayList(){
+        uList= new ArrayList<Users>();
+        uList= dbHelp.getAllRows();
     }
 
     public void UserLogin(){
         Logbtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                String u=unlogin.getText().toString();
+                String ul=unlogin.getText().toString();
                 String p=passlogin.getText().toString();
+                int spot;
 
-
-                if(TextUtils.isEmpty(u)){
+                if(TextUtils.isEmpty(ul)){
                     unlogin.setError("Forgot to enter Username");
                     return;
                 }
@@ -64,16 +72,20 @@ public class MainActivity extends AppCompatActivity {
                     passlogin.setError("Forgot to Enter Password");
                     return;
                 }
-                Log.d("user", u);
+                Log.d("user", ul);
                 Log.d("pass", p);
+                Log.d("HurrDurrr", uList.get(0).getUname());
 
                 for(int i=0;i<uList.size();i++){
-                    if (u.equals(uList) && p.equals(uList)){
-                        startActivity(logIntent);
-                    }
-                    else{
-                        passlogin.setError("Wrong Password");
-                        return;
+                    if (ul.equals(uList.get(i).getUname())){
+                        spot = i;
+                        if(p.equals(uList.get(spot).getPassw())){
+                            startActivity(logIntent);
+                        }
+                        else {
+                            passlogin.setError("Wrong Password");
+                            return;
+                        }
                     }
                 }
             }

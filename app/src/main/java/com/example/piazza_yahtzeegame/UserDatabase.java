@@ -97,7 +97,7 @@ public class UserDatabase extends SQLiteOpenHelper {
 
     public void userChange(Users u){
         SQLiteDatabase db= this.getWritableDatabase();
-        db.execSQL("UPDATE "+TABLE_NAME+" SET firstname '"+u.getFname()+"', lastname = '"+u.getLname()+"', password'"+u.getPassw()+"', email '"+u.getEmail()+"' WHERE username = '"+u.getUname()+"';");
+        db.execSQL("UPDATE "+TABLE_NAME+" SET firstname = '"+u.getFname()+"', lastname = '"+u.getLname()+"', password = '"+u.getPassw()+"', email = '"+u.getEmail()+"' WHERE username = '"+u.getUname()+"';");
 
         db.close();
     }
@@ -108,7 +108,5 @@ public class UserDatabase extends SQLiteOpenHelper {
 
         db.close();
     }
-
-
 
 }
