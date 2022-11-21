@@ -74,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 Log.d("user", ul);
                 Log.d("pass", p);
-                Log.d("HurrDurrr", uList.get(0).getUname());
 
                 for(int i=0;i<uList.size();i++){
                     if (ul.equals(uList.get(i).getUname())){

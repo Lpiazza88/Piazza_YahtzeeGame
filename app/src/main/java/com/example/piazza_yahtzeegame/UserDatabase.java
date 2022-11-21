@@ -17,18 +17,15 @@ import java.util.List;
 public class UserDatabase extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "Users.db";
     private static final String TABLE_NAME = "Users";
-    private static final String HIGH_SCORES = "Scores.db";
     private static final String SCORE_LIST = "Scores";
 
-    public UserDatabase(Context context){
-        super(context, DATABASE_NAME, null, 1);
-    }
+    public UserDatabase(Context context){super(context, DATABASE_NAME, null, 2);}
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + TABLE_NAME + "(username TEXT PRIMARY KEY NOT NULL, firstname TEXT, lastname TEXT, email TEXT, password TEXT)");
 
-        db.execSQL("CREATE TABLE " + SCORE_LIST + "(INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, score TEXT, date TEXT)");
+        db.execSQL("CREATE TABLE " + SCORE_LIST + "(id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, score TEXT, date TEXT)");
     }
 
     @Override
