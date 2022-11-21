@@ -17,6 +17,8 @@ import java.util.List;
 public class UserDatabase extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "Users.db";
     private static final String TABLE_NAME = "Users";
+    private static final String HIGH_SCORES = "Scores.db";
+    private static final String SCORE_LIST = "Scores";
 
     public UserDatabase(Context context){
         super(context, DATABASE_NAME, null, 1);
@@ -25,11 +27,14 @@ public class UserDatabase extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + TABLE_NAME + "(username TEXT PRIMARY KEY NOT NULL, firstname TEXT, lastname TEXT, email TEXT, password TEXT)");
+
+        db.execSQL("CREATE TABLE " + SCORE_LIST + "(INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, score TEXT, date TEXT)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + SCORE_LIST);
         onCreate(db);
     }
 
@@ -39,6 +44,8 @@ public class UserDatabase extends SQLiteOpenHelper {
             db.execSQL("INSERT INTO " + TABLE_NAME+" VALUES('Lpiazza', 'Lee', 'Piazza', 'lpiazza@my.monroeccc.edu', 'badpassword');");
             db.execSQL("INSERT INTO " + TABLE_NAME+" VALUES('Lpiazza1', 'Lee', 'Piazza', 'lpiazza@my.monroeccc.edu', 'badpassword');");
             db.execSQL("INSERT INTO " + TABLE_NAME+" VALUES('Lpiazza2', 'Lee', 'Piazza', 'lpiazza@my.monroeccc.edu', 'badpassword');");
+            db.execSQL ("INSERT INTO " + SCORE_LIST + " VALUES('0', 'Lpiazza', '50', '11/19/22');");
+            db.execSQL ("INSERT INTO " + SCORE_LIST + " VALUES('1', 'Lpiazza1', '45', '11/20/22');");
             db.close();
             return true;
         }
@@ -54,6 +61,33 @@ public class UserDatabase extends SQLiteOpenHelper {
         db.close();
 
         return numRows;
+    }
+
+    @SuppressLint("Range")
+    public ArrayList<Scores> getAllScores(){
+        ArrayList<Scores> ListScores = new ArrayList<Scores>();
+
+        String selectQuery = "SELECT * FROM " + SCORE_LIST +";";
+        SQLiteDatabase db=this.getReadableDatabase();
+
+        Cursor cursor=db.rawQuery(selectQuery, null);
+
+        String username;
+        String score;
+        String date;
+
+        if(cursor.moveToFirst()){
+            do{
+                username=cursor.getString(cursor.getColumnIndex("username"));
+                score=cursor.getString(cursor.getColumnIndex("score"));
+                date=cursor.getString(cursor.getColumnIndex("date"));
+
+                ListScores.add(new Scores(username, score, date));
+            }
+            while(cursor.moveToNext());
+        }
+        db.close();
+        return ListScores;
     }
 
     @SuppressLint("Range")
@@ -91,6 +125,13 @@ public class UserDatabase extends SQLiteOpenHelper {
     public void addNewUsers(Users u){
         SQLiteDatabase db=this.getWritableDatabase();
         db.execSQL("INSERT INTO " + TABLE_NAME + " VALUES ('" + u.getUname() +"','" + u.getFname() + "','" + u.getLname() + "','" + u.getPassw() + "','" + u.getEmail() + "' );");
+
+        db.close();
+    }
+
+    public void addNewScore(Scores u){
+        SQLiteDatabase db=this.getWritableDatabase();
+        db.execSQL("INSERT INTO "+ SCORE_LIST +" VALUES ('"+ u.getusername()+"','" + u.getscore() +"','" + u.getdate() +"');");
 
         db.close();
     }

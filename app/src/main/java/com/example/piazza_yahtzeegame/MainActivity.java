@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                     if (ul.equals(uList.get(i).getUname())){
                         spot = i;
                         if(p.equals(uList.get(spot).getPassw())){
+                            logIntent.putExtra("Users", uList.get(spot));
                             startActivity(logIntent);
                         }
                         else {

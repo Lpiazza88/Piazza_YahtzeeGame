@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class User_Information extends AppCompatActivity {
     ImageView PlayBtn;
@@ -22,6 +25,9 @@ public class User_Information extends AppCompatActivity {
 
     Users userPassed;
     UserDatabase dbHelp;
+
+    ArrayList<String> scores;
+    ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +45,9 @@ public class User_Information extends AppCompatActivity {
         KeyUsername = findViewById(R.id.tv_kun);
 
         KeyUsername.setText(userPassed.getUname());
+
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, scores);
+        HighScores.setAdapter(adapter);
 
         gameIntent = new Intent(User_Information.this, Play_Game.class);
         editIntent = new Intent(User_Information.this, edit_delete.class);
