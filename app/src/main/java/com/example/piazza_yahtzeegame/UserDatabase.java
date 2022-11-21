@@ -63,6 +63,15 @@ public class UserDatabase extends SQLiteOpenHelper {
         return numRows;
     }
 
+    public int numRowsInTable(){
+        SQLiteDatabase db=this.getReadableDatabase();
+        int numbRows=(int) DatabaseUtils.queryNumEntries(db,SCORE_LIST);
+
+        db.close();
+
+        return numbRows;
+    }
+
     @SuppressLint("Range")
     public ArrayList<Scores> getAllScores(){
         ArrayList<Scores> ListScores = new ArrayList<Scores>();

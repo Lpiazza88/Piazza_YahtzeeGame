@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -35,10 +36,13 @@ public class User_Information extends AppCompatActivity {
         setContentView(R.layout.activity_user_information);
 
         dbHelp = new UserDatabase(this);
+        dbHelp.initializeDB();
         Intent cameFrom = getIntent();
         userPassed = (Users) cameFrom.getSerializableExtra("Users");
         PlayBtn = findViewById(R.id.Btn_Play);
         EditBtn = findViewById(R.id.Btn_Edit);
+
+        Log.d("Number of records: ", dbHelp.numRowsInTable() + "");
 
         HighScores = findViewById(R.id.lv_highscores);
 
