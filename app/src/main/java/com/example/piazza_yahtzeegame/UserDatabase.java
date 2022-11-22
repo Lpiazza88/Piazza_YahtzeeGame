@@ -29,7 +29,7 @@ public class UserDatabase extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase db, int i, int i2) {
         db.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + SCORE_LIST);
         onCreate(db);
@@ -43,6 +43,7 @@ public class UserDatabase extends SQLiteOpenHelper {
             db.execSQL("INSERT INTO " + TABLE_NAME+" VALUES('Lpiazza2', 'Lee', 'Piazza', 'lpiazza@my.monroeccc.edu', 'badpassword');");
             db.execSQL ("INSERT INTO " + SCORE_LIST + " VALUES('0', 'Lpiazza', '50', '11/19/22');");
             db.execSQL ("INSERT INTO " + SCORE_LIST + " VALUES('1', 'Lpiazza1', '45', '11/20/22');");
+            db.execSQL ("INSERT INTO " + SCORE_LIST + " VALUES('2', 'Lpiazza1', '44', '11/22/22');");
             db.close();
             return true;
         }

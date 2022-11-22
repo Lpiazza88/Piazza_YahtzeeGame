@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -27,6 +28,7 @@ public class User_Information extends AppCompatActivity {
     Users userPassed;
     UserDatabase dbHelp;
 
+    ArrayList<Scores> Score;
     ArrayList<String> scores;
     ArrayAdapter<String> adapter;
 
@@ -35,20 +37,21 @@ public class User_Information extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_information);
 
-        dbHelp = new UserDatabase(this);
-        dbHelp.initializeDB();
+        adapter.notifyDataSetChanged();
         Intent cameFrom = getIntent();
         userPassed = (Users) cameFrom.getSerializableExtra("Users");
         PlayBtn = findViewById(R.id.Btn_Play);
         EditBtn = findViewById(R.id.Btn_Edit);
+        KeyUsername = findViewById(R.id.tv_kun);
+
+        KeyUsername.setText(userPassed.getUname());
 
         Log.d("Number of records: ", dbHelp.numRowsInTable() + "");
 
         HighScores = findViewById(R.id.lv_highscores);
-
-        KeyUsername = findViewById(R.id.tv_kun);
-
-        KeyUsername.setText(userPassed.getUname());
+        dbHelp = new UserDatabase(this);
+        dbHelp.initializeDB();
+        Log.d("Number of Records: ", dbHelp.numRowsInTable() + "");
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, scores);
         HighScores.setAdapter(adapter);
@@ -60,7 +63,16 @@ public class User_Information extends AppCompatActivity {
 
         startGame();
 
+        copyToList();
+
         editUser();
+    }
+
+    public void copyToList(){
+        scores= new ArrayList<String>();
+        for(int i=0; i<Score.size();i++){
+            scores.add(Score.get(i).getusername()+", "+ Score.get(i).getscore()+", "+Score.get(i).getdate());
+        }
     }
 
     public void startGame(){
