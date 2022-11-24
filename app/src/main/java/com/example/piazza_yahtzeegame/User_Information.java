@@ -51,8 +51,8 @@ public class User_Information extends AppCompatActivity {
         HighScores = findViewById(R.id.lv_highscores);
         dbHelp = new UserDatabase(this);
         dbHelp.initializeDB();
-        Log.d("Number of Records: ", dbHelp.numRowsInTable() + "");
 
+        copyToList();
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, scores);
         HighScores.setAdapter(adapter);
 
