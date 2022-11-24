@@ -62,6 +62,7 @@ public class User_Information extends AppCompatActivity {
         gameIntent.putExtra("Users", userPassed);
         editIntent.putExtra("Users", userPassed);
         Log.d("Number of records: ", dbHelp.numRowsInTable() + "");
+        saveScores();
         startGame();
 
         copyToList();
@@ -69,6 +70,11 @@ public class User_Information extends AppCompatActivity {
         editUser();
     }
 
+    public void saveScores(){
+        Score = new ArrayList<Scores>();
+        Score = dbHelp.getAllScores();
+    }
+    
     public void copyToList(){
         scores= new ArrayList<String>();
         for(int i=0; i<Score.size();i++){
