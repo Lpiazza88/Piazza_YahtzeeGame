@@ -51,6 +51,7 @@ public class User_Information extends AppCompatActivity {
         HighScores = findViewById(R.id.lv_highscores);
         dbHelp = new UserDatabase(this);
         dbHelp.initializeDB();
+        saveScores();
 
         copyToList();
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, scores);
@@ -62,7 +63,7 @@ public class User_Information extends AppCompatActivity {
         gameIntent.putExtra("Users", userPassed);
         editIntent.putExtra("Users", userPassed);
         Log.d("Number of records: ", dbHelp.numRowsInTable() + "");
-        saveScores();
+
         startGame();
 
         copyToList();
@@ -74,7 +75,7 @@ public class User_Information extends AppCompatActivity {
         Score = new ArrayList<Scores>();
         Score = dbHelp.getAllScores();
     }
-    
+
     public void copyToList(){
         scores= new ArrayList<String>();
         for(int i=0; i<Score.size();i++){

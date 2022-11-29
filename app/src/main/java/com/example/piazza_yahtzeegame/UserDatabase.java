@@ -39,6 +39,7 @@ public class UserDatabase extends SQLiteOpenHelper {
         if(numberOfRowsInTable()==0){
             SQLiteDatabase db=this.getWritableDatabase();
             db.execSQL("INSERT INTO " + TABLE_NAME+" VALUES('Lpiazza', 'Lee', 'Piazza', 'lpiazza@my.monroeccc.edu', 'badpassword');");
+            db.execSQL("INSERT INTO " + TABLE_NAME+" VALUES('A', 'Lee', 'Piazza', 'lpiazza@my.monroeccc.edu', 'pw');");
             db.execSQL("INSERT INTO " + TABLE_NAME+" VALUES('Lpiazza1', 'Lee', 'Piazza', 'lpiazza@my.monroeccc.edu', 'badpassword');");
             db.execSQL("INSERT INTO " + TABLE_NAME+" VALUES('Lpiazza2', 'Lee', 'Piazza', 'lpiazza@my.monroeccc.edu', 'badpassword');");
             db.execSQL ("INSERT INTO " + SCORE_LIST + " VALUES('0', 'Lpiazza', '50', '11/19/22');");

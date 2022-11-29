@@ -46,14 +46,16 @@
 
     <ListView
         android:id="@+id/lv_highscores"
-        android:layout_width="408dp"
-        android:layout_height="335dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="2dp"
+        android:layout_width="358dp"
+        android:layout_height="226dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hs" />
 
     <TextView
         android:id="@+id/tv_edit"
@@ -89,7 +91,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginBottom="268dp"
         android:fontFamily="casual"
         android:lineSpacingExtra="8sp"
         android:text="Highscores"
@@ -97,7 +99,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/lv_highscores"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Btn_Play"
         app:layout_constraintStart_toEndOf="@+id/Btn_Edit" />
 
