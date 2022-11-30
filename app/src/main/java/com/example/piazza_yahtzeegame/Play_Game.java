@@ -58,22 +58,6 @@ public class Play_Game extends AppCompatActivity {
         handler=new Handler(callback);
     }
 
-    /*//User pressed dice, lets start
-    private class HandleClick implements View.OnClickListener {
-        public void onClick(View arg0) {
-            if (!rolling) {
-                rolling = true;
-                //Show rolling image
-                dice_picture.setImageResource(R.drawable.dice3droll);
-                dice_picture1.setImageResource(R.drawable.dice3droll);
-                dice_picture2.setImageResource(R.drawable.dice3droll);
-                dice_picture3.setImageResource(R.drawable.dice3droll);
-                dice_picture4.setImageResource(R.drawable.dice3droll);
-                //Pause to allow image to update
-                timer.schedule(new Roll(), 400);
-            }
-        }
-    }*/
     //When pause completed message sent to callback
     class Roll extends TimerTask {
         public void run() {
@@ -84,7 +68,7 @@ public class Play_Game extends AppCompatActivity {
     //Receives message from timer to start dice roll
     Handler.Callback callback = new Handler.Callback() {
         public boolean handleMessage(Message msg) {
-            int i;
+
             //Get roll result
             //Remember nextInt returns 0 to 5 for argument of 6
             //hence + 1
@@ -92,27 +76,27 @@ public class Play_Game extends AppCompatActivity {
                 switch (rng.nextInt(6) + 1) {
                     case 1:
                         dice_picture.setImageResource(R.drawable.one);
-                        i=1;
+
                         break;
                     case 2:
                         dice_picture.setImageResource(R.drawable.two);
-                        i=2;
+
                         break;
                     case 3:
                         dice_picture.setImageResource(R.drawable.three);
-                        i=3;
+
                         break;
                     case 4:
                         dice_picture.setImageResource(R.drawable.four);
-                        i=4;
+
                         break;
                     case 5:
                         dice_picture.setImageResource(R.drawable.five);
-                        i=5;
+
                         break;
                     case 6:
                         dice_picture.setImageResource(R.drawable.six);
-                        i=6;
+
                         break;
                     default:
                 }
@@ -121,27 +105,27 @@ public class Play_Game extends AppCompatActivity {
                 switch (rng.nextInt(6) + 1) {
                     case 1:
                         dice_picture1.setImageResource(R.drawable.one);
-                        i=1;
+
                         break;
                     case 2:
                         dice_picture1.setImageResource(R.drawable.two);
-                        i=2;
+
                         break;
                     case 3:
                         dice_picture1.setImageResource(R.drawable.three);
-                        i=3;
+
                         break;
                     case 4:
                         dice_picture1.setImageResource(R.drawable.four);
-                        i=4;
+
                         break;
                     case 5:
                         dice_picture1.setImageResource(R.drawable.five);
-                        i=5;
+
                         break;
                     case 6:
                         dice_picture1.setImageResource(R.drawable.six);
-                        i=6;
+
                         break;
                     default:
                 }
@@ -150,27 +134,27 @@ public class Play_Game extends AppCompatActivity {
                 switch (rng.nextInt(6) + 1) {
                     case 1:
                         dice_picture2.setImageResource(R.drawable.one);
-                        i=1;
+
                         break;
                     case 2:
                         dice_picture2.setImageResource(R.drawable.two);
-                        i=2;
+
                         break;
                     case 3:
                         dice_picture2.setImageResource(R.drawable.three);
-                        i=3;
+
                         break;
                     case 4:
                         dice_picture2.setImageResource(R.drawable.four);
-                        i=4;
+
                         break;
                     case 5:
                         dice_picture2.setImageResource(R.drawable.five);
-                        i=5;
+
                         break;
                     case 6:
                         dice_picture2.setImageResource(R.drawable.six);
-                        i=6;
+
                         break;
                     default:
                 }
@@ -179,27 +163,27 @@ public class Play_Game extends AppCompatActivity {
                 switch (rng.nextInt(6) + 1) {
                     case 1:
                         dice_picture3.setImageResource(R.drawable.one);
-                        i=1;
+
                         break;
                     case 2:
                         dice_picture3.setImageResource(R.drawable.two);
-                        i=2;
+
                         break;
                     case 3:
                         dice_picture3.setImageResource(R.drawable.three);
-                        i=3;
+
                         break;
                     case 4:
                         dice_picture3.setImageResource(R.drawable.four);
-                        i=4;
+
                         break;
                     case 5:
                         dice_picture3.setImageResource(R.drawable.five);
-                        i=5;
+
                         break;
                     case 6:
                         dice_picture3.setImageResource(R.drawable.six);
-                        i=6;
+
                         break;
                     default:
                 }
@@ -208,27 +192,27 @@ public class Play_Game extends AppCompatActivity {
                 switch (rng.nextInt(6) + 1) {
                     case 1:
                         dice_picture4.setImageResource(R.drawable.one);
-                        i=1;
+
                         break;
                     case 2:
                         dice_picture4.setImageResource(R.drawable.two);
-                        i=2;
+
                         break;
                     case 3:
                         dice_picture4.setImageResource(R.drawable.three);
-                        i=3;
+
                         break;
                     case 4:
                         dice_picture4.setImageResource(R.drawable.four);
-                        i=4;
+
                         break;
                     case 5:
                         dice_picture4.setImageResource(R.drawable.five);
-                        i=5;
+
                         break;
                     case 6:
                         dice_picture4.setImageResource(R.drawable.six);
-                        i=6;
+
                         break;
                     default:
                 }
@@ -241,27 +225,41 @@ public class Play_Game extends AppCompatActivity {
     //User pressed dice, lets start
     private class HandleClick implements View.OnClickListener {
         public void onClick(View arg0) {
-            if (!rolling) {
-                rolling = true;
-                if(!check1.isChecked()) {
-                    dice_picture.setImageResource(R.drawable.dice3droll);
-                }
-                if(!check2.isChecked()) {
-                    dice_picture1.setImageResource(R.drawable.dice3droll);
-                }
-                if(!check3.isChecked()) {
-                    dice_picture2.setImageResource(R.drawable.dice3droll);
-                }
-                if(!check4.isChecked()) {
-                    dice_picture3.setImageResource(R.drawable.dice3droll);
-                }
-                if(!check5.isChecked()) {
-                    dice_picture4.setImageResource(R.drawable.dice3droll);
-                }
+            int clicks = 0;
+            int max=3;
+                if (!rolling) {
+                    rolling = true;
+                    if(clicks<3){
+                    clicks = clicks + 1;
+                    if (!check1.isChecked()) {
+                        dice_picture.setImageResource(R.drawable.dice3droll);
+                    }
+                    if (!check2.isChecked()) {
+                        dice_picture1.setImageResource(R.drawable.dice3droll);
+                    }
+                    if (!check3.isChecked()) {
+                        dice_picture2.setImageResource(R.drawable.dice3droll);
+                    }
+                    if (!check4.isChecked()) {
+                        dice_picture3.setImageResource(R.drawable.dice3droll);
+                    }
+                    if (!check5.isChecked()) {
+                        dice_picture4.setImageResource(R.drawable.dice3droll);
+                    }
                     timer.schedule(new Roll(), 400);
+                    clicks ++;}
+
+                    else{
+                        roll.setEnabled(false);
+                    }
+                }
+                /*if (clicks>3){
+                    roll.setEnabled(false);
+                }*/
             }
+
         }
-    }
+
     //Clean up
     protected void onPause() {
         super.onPause();
