@@ -31,6 +31,23 @@ public class Play_Game extends AppCompatActivity {
     boolean rolling=false;      //Is die rolling?
     ImageView roll;
 
+    int clicks = 1;
+
+    int a;
+    int b;
+    int c;
+    int d;
+    int e;
+    int f;
+    int t1;
+    int t2;
+    int t3;
+    int t4;
+    int t5;
+    int t6;
+
+
+
     TextView test;
 
     @Override
@@ -76,27 +93,27 @@ public class Play_Game extends AppCompatActivity {
                 switch (rng.nextInt(6) + 1) {
                     case 1:
                         dice_picture.setImageResource(R.drawable.one);
-
+                        a=1;
                         break;
                     case 2:
                         dice_picture.setImageResource(R.drawable.two);
-
+                        b=2;
                         break;
                     case 3:
                         dice_picture.setImageResource(R.drawable.three);
-
+                        c=3;
                         break;
                     case 4:
                         dice_picture.setImageResource(R.drawable.four);
-
+                        d=4;
                         break;
                     case 5:
                         dice_picture.setImageResource(R.drawable.five);
-
+                        e=5;
                         break;
                     case 6:
                         dice_picture.setImageResource(R.drawable.six);
-
+                        f=6;
                         break;
                     default:
                 }
@@ -105,27 +122,27 @@ public class Play_Game extends AppCompatActivity {
                 switch (rng.nextInt(6) + 1) {
                     case 1:
                         dice_picture1.setImageResource(R.drawable.one);
-
+                        a=1;
                         break;
                     case 2:
                         dice_picture1.setImageResource(R.drawable.two);
-
+                        b=2;
                         break;
                     case 3:
                         dice_picture1.setImageResource(R.drawable.three);
-
+                        c=3;
                         break;
                     case 4:
                         dice_picture1.setImageResource(R.drawable.four);
-
+                        d=4;
                         break;
                     case 5:
                         dice_picture1.setImageResource(R.drawable.five);
-
+                        e=5;
                         break;
                     case 6:
                         dice_picture1.setImageResource(R.drawable.six);
-
+                        f=6;
                         break;
                     default:
                 }
@@ -218,19 +235,25 @@ public class Play_Game extends AppCompatActivity {
                 }
             }
             rolling=false;  //user can press again
+            checked();
             return true;
         }
     };
 
-    //User pressed dice, lets start
+    private void checked(){
+        if(check1.isChecked()) {
+            t1= a||b||c||d||e;
+            test.setText(a + a);
+        }
+
+    }
+    //User pressed button, lets start
     private class HandleClick implements View.OnClickListener {
         public void onClick(View arg0) {
-            int clicks = 0;
-            int max=3;
+            if(clicks<4){
+                /*clicks = clicks + 1;*/
                 if (!rolling) {
                     rolling = true;
-                    if(clicks<3){
-                    clicks = clicks + 1;
                     if (!check1.isChecked()) {
                         dice_picture.setImageResource(R.drawable.dice3droll);
                     }
@@ -247,18 +270,15 @@ public class Play_Game extends AppCompatActivity {
                         dice_picture4.setImageResource(R.drawable.dice3droll);
                     }
                     timer.schedule(new Roll(), 400);
-                    clicks ++;}
-
-                    else{
-                        roll.setEnabled(false);
-                    }
                 }
-                /*if (clicks>3){
-                    roll.setEnabled(false);
-                }*/
+                clicks++;
             }
-
+            else if (clicks>4){
+                roll.setEnabled(false);
+            }
         }
+
+    }
 
     //Clean up
     protected void onPause() {
