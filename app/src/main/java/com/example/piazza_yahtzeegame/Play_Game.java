@@ -33,18 +33,12 @@ public class Play_Game extends AppCompatActivity {
 
     int clicks = 1;
 
-    int a;
-    int b;
-    int c;
-    int d;
-    int e;
-    int f;
-    int t1;
-    int t2;
-    int t3;
-    int t4;
-    int t5;
-    int t6;
+    int a=1;
+    int b=2;
+    int c=3;
+    int d=4;
+    int e=5;
+    int f=6;
 
 
 
@@ -89,31 +83,34 @@ public class Play_Game extends AppCompatActivity {
             //Get roll result
             //Remember nextInt returns 0 to 5 for argument of 6
             //hence + 1
+            if(test.getText()!=null){
+                test.getText().toString();
+            }
             if(!check1.isChecked()) {
                 switch (rng.nextInt(6) + 1) {
                     case 1:
                         dice_picture.setImageResource(R.drawable.one);
-                        a=1;
+                        test.setText(""+a);
                         break;
                     case 2:
                         dice_picture.setImageResource(R.drawable.two);
-                        b=2;
+                        test.setText(""+b);
                         break;
                     case 3:
                         dice_picture.setImageResource(R.drawable.three);
-                        c=3;
+                        test.setText(""+c);
                         break;
                     case 4:
                         dice_picture.setImageResource(R.drawable.four);
-                        d=4;
+                        test.setText(""+d);
                         break;
                     case 5:
                         dice_picture.setImageResource(R.drawable.five);
-                        e=5;
+                        test.setText(""+e);
                         break;
                     case 6:
                         dice_picture.setImageResource(R.drawable.six);
-                        f=6;
+                        test.setText(""+f);
                         break;
                     default:
                 }
@@ -122,27 +119,27 @@ public class Play_Game extends AppCompatActivity {
                 switch (rng.nextInt(6) + 1) {
                     case 1:
                         dice_picture1.setImageResource(R.drawable.one);
-                        a=1;
+                        test.setText(""+a);
                         break;
                     case 2:
                         dice_picture1.setImageResource(R.drawable.two);
-                        b=2;
+                        test.setText(""+b);
                         break;
                     case 3:
                         dice_picture1.setImageResource(R.drawable.three);
-                        c=3;
+                        test.setText(""+c);
                         break;
                     case 4:
                         dice_picture1.setImageResource(R.drawable.four);
-                        d=4;
+                        test.setText(""+d);
                         break;
                     case 5:
                         dice_picture1.setImageResource(R.drawable.five);
-                        e=5;
+                        test.setText(""+e);
                         break;
                     case 6:
                         dice_picture1.setImageResource(R.drawable.six);
-                        f=6;
+                        test.setText(""+f);
                         break;
                     default:
                 }
@@ -235,18 +232,12 @@ public class Play_Game extends AppCompatActivity {
                 }
             }
             rolling=false;  //user can press again
-            checked();
+
             return true;
         }
     };
 
-    private void checked(){
-        if(check1.isChecked()) {
-            t1= a||b||c||d||e;
-            test.setText(a + a);
-        }
 
-    }
     //User pressed button, lets start
     private class HandleClick implements View.OnClickListener {
         public void onClick(View arg0) {
