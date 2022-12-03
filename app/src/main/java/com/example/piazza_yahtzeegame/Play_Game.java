@@ -31,6 +31,8 @@ public class Play_Game extends AppCompatActivity {
     boolean rolling=false;      //Is die rolling?
     ImageView roll;
 
+    int[] images = {R.drawable.one, R.drawable.two, R.drawable.three, R.drawable.four, R.drawable.five, R.drawable.six};
+    Random rand = new Random();
     int clicks = 1;
 
     int a=1;
@@ -79,38 +81,46 @@ public class Play_Game extends AppCompatActivity {
     //Receives message from timer to start dice roll
     Handler.Callback callback = new Handler.Callback() {
         public boolean handleMessage(Message msg) {
+            if(!check1.isChecked()){
+                dice_picture.setImageResource(images[rand.nextInt(images.length)]);
+
+            }
+            if(!check2.isChecked()){
+                dice_picture1.setImageResource(images[rand.nextInt(images.length)]);
+            }
+            if(!check3.isChecked()){
+                dice_picture2.setImageResource(images[rand.nextInt(images.length)]);
+            }
+            if(!check4.isChecked()){
+                dice_picture3.setImageResource(images[rand.nextInt(images.length)]);
+            }
+            if(!check5.isChecked()){
+                dice_picture4.setImageResource(images[rand.nextInt(images.length)]);
+            }
 
             //Get roll result
             //Remember nextInt returns 0 to 5 for argument of 6
             //hence + 1
-            if(test.getText()!=null){
-                test.getText().toString();
-            }
+/*
             if(!check1.isChecked()) {
                 switch (rng.nextInt(6) + 1) {
                     case 1:
                         dice_picture.setImageResource(R.drawable.one);
-                        test.setText(""+a);
                         break;
                     case 2:
                         dice_picture.setImageResource(R.drawable.two);
-                        test.setText(""+b);
                         break;
                     case 3:
                         dice_picture.setImageResource(R.drawable.three);
-                        test.setText(""+c);
                         break;
                     case 4:
                         dice_picture.setImageResource(R.drawable.four);
-                        test.setText(""+d);
                         break;
                     case 5:
                         dice_picture.setImageResource(R.drawable.five);
-                        test.setText(""+e);
                         break;
                     case 6:
                         dice_picture.setImageResource(R.drawable.six);
-                        test.setText(""+f);
                         break;
                     default:
                 }
@@ -119,27 +129,21 @@ public class Play_Game extends AppCompatActivity {
                 switch (rng.nextInt(6) + 1) {
                     case 1:
                         dice_picture1.setImageResource(R.drawable.one);
-                        test.setText(""+a);
                         break;
                     case 2:
                         dice_picture1.setImageResource(R.drawable.two);
-                        test.setText(""+b);
                         break;
                     case 3:
                         dice_picture1.setImageResource(R.drawable.three);
-                        test.setText(""+c);
                         break;
                     case 4:
                         dice_picture1.setImageResource(R.drawable.four);
-                        test.setText(""+d);
                         break;
                     case 5:
                         dice_picture1.setImageResource(R.drawable.five);
-                        test.setText(""+e);
                         break;
                     case 6:
                         dice_picture1.setImageResource(R.drawable.six);
-                        test.setText(""+f);
                         break;
                     default:
                 }
@@ -231,6 +235,9 @@ public class Play_Game extends AppCompatActivity {
                     default:
                 }
             }
+            if (dice_picture1=R.drawable.one){
+
+            }*/
             rolling=false;  //user can press again
 
             return true;
