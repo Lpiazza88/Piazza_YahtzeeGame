@@ -31,20 +31,39 @@ public class Play_Game extends AppCompatActivity {
     boolean rolling=false;      //Is die rolling?
     ImageView roll;
 
+    ImageView one;
+    TextView onet;
+    ImageView two;
+    TextView twot;
+    ImageView three;
+    TextView threet;
+    ImageView four;
+    TextView fourt;
+    ImageView five;
+    TextView fivet;
+    ImageView six;
+    TextView sixt;
+    ImageView tok;
+    TextView tokt;
+    ImageView fok;
+    TextView fokt;
+    ImageView full;
+    TextView fullt;
+    ImageView small;
+    TextView smallt;
+    ImageView large;
+    TextView larget;
+    ImageView yahtz;
+    TextView yahtzt;
+    ImageView chance;
+    TextView chancet;
+    ImageView total;
+    TextView totalt;
+
     int[] images = {R.drawable.one, R.drawable.two, R.drawable.three, R.drawable.four, R.drawable.five, R.drawable.six};
     Random rand = new Random();
     int clicks = 1;
 
-    int a=1;
-    int b=2;
-    int c=3;
-    int d=4;
-    int e=5;
-    int f=6;
-
-
-
-    TextView test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +83,35 @@ public class Play_Game extends AppCompatActivity {
         check4 = (CheckBox) findViewById(R.id.cb4);
         check5 = (CheckBox) findViewById(R.id.cb5);
 
-        test=(TextView) findViewById(R.id.test);
+        one = (ImageView) findViewById(R.id.OneBtn);
+        onet = (TextView) findViewById(R.id.OneTtl);
+        two = (ImageView) findViewById(R.id.TwoBtn);
+        twot = (TextView) findViewById(R.id.TwoTtl);
+        three = (ImageView) findViewById(R.id.ThreeBtn);
+        threet = (TextView) findViewById(R.id.ThreeTtl);
+        four = (ImageView) findViewById(R.id.FourBtn);
+        fourt = (TextView) findViewById(R.id.FourTtl);
+        five = (ImageView) findViewById(R.id.FiveBtn);
+        fivet = (TextView) findViewById(R.id.FiveTtl);
+        six = (ImageView) findViewById(R.id.SixBtn);
+        sixt = (TextView) findViewById(R.id.SixTtl);
+        tok = (ImageView) findViewById(R.id.TkBtn);
+        tokt = (TextView) findViewById(R.id.TokTtl);
+        fok = (ImageView) findViewById(R.id.FkBtn);
+        fokt = (TextView) findViewById(R.id.FokTtl);
+        full = (ImageView) findViewById(R.id.FhBtn);
+        fullt = (TextView) findViewById(R.id.FhTtl);
+        small = (ImageView) findViewById(R.id.SmBtn);
+        smallt = (TextView) findViewById(R.id.SmTtl);
+        large = (ImageView) findViewById(R.id.LgBtn);
+        larget = (TextView) findViewById(R.id.LgTtl);
+        yahtz = (ImageView) findViewById(R.id.YahBtn);
+        yahtzt = (TextView) findViewById(R.id.YahTtl);
+        chance = (ImageView) findViewById(R.id.ChanceBtn);
+        chancet = (TextView) findViewById(R.id.ChTtl);
+        total = (ImageView) findViewById(R.id.TotalBtn);
+        totalt = (TextView) findViewById(R.id.TtlTtl);
+
 
         roll.setOnClickListener(new HandleClick());
         //link handler to callback
@@ -83,7 +130,6 @@ public class Play_Game extends AppCompatActivity {
         public boolean handleMessage(Message msg) {
             if(!check1.isChecked()){
                 dice_picture.setImageResource(images[rand.nextInt(images.length)]);
-
             }
             if(!check2.isChecked()){
                 dice_picture1.setImageResource(images[rand.nextInt(images.length)]);
@@ -98,146 +144,7 @@ public class Play_Game extends AppCompatActivity {
                 dice_picture4.setImageResource(images[rand.nextInt(images.length)]);
             }
 
-            //Get roll result
-            //Remember nextInt returns 0 to 5 for argument of 6
-            //hence + 1
-/*
-            if(!check1.isChecked()) {
-                switch (rng.nextInt(6) + 1) {
-                    case 1:
-                        dice_picture.setImageResource(R.drawable.one);
-                        break;
-                    case 2:
-                        dice_picture.setImageResource(R.drawable.two);
-                        break;
-                    case 3:
-                        dice_picture.setImageResource(R.drawable.three);
-                        break;
-                    case 4:
-                        dice_picture.setImageResource(R.drawable.four);
-                        break;
-                    case 5:
-                        dice_picture.setImageResource(R.drawable.five);
-                        break;
-                    case 6:
-                        dice_picture.setImageResource(R.drawable.six);
-                        break;
-                    default:
-                }
-            }
-            if(!check2.isChecked()) {
-                switch (rng.nextInt(6) + 1) {
-                    case 1:
-                        dice_picture1.setImageResource(R.drawable.one);
-                        break;
-                    case 2:
-                        dice_picture1.setImageResource(R.drawable.two);
-                        break;
-                    case 3:
-                        dice_picture1.setImageResource(R.drawable.three);
-                        break;
-                    case 4:
-                        dice_picture1.setImageResource(R.drawable.four);
-                        break;
-                    case 5:
-                        dice_picture1.setImageResource(R.drawable.five);
-                        break;
-                    case 6:
-                        dice_picture1.setImageResource(R.drawable.six);
-                        break;
-                    default:
-                }
-            }
-            if(!check3.isChecked()) {
-                switch (rng.nextInt(6) + 1) {
-                    case 1:
-                        dice_picture2.setImageResource(R.drawable.one);
-
-                        break;
-                    case 2:
-                        dice_picture2.setImageResource(R.drawable.two);
-
-                        break;
-                    case 3:
-                        dice_picture2.setImageResource(R.drawable.three);
-
-                        break;
-                    case 4:
-                        dice_picture2.setImageResource(R.drawable.four);
-
-                        break;
-                    case 5:
-                        dice_picture2.setImageResource(R.drawable.five);
-
-                        break;
-                    case 6:
-                        dice_picture2.setImageResource(R.drawable.six);
-
-                        break;
-                    default:
-                }
-            }
-            if(!check4.isChecked()) {
-                switch (rng.nextInt(6) + 1) {
-                    case 1:
-                        dice_picture3.setImageResource(R.drawable.one);
-
-                        break;
-                    case 2:
-                        dice_picture3.setImageResource(R.drawable.two);
-
-                        break;
-                    case 3:
-                        dice_picture3.setImageResource(R.drawable.three);
-
-                        break;
-                    case 4:
-                        dice_picture3.setImageResource(R.drawable.four);
-
-                        break;
-                    case 5:
-                        dice_picture3.setImageResource(R.drawable.five);
-
-                        break;
-                    case 6:
-                        dice_picture3.setImageResource(R.drawable.six);
-
-                        break;
-                    default:
-                }
-            }
-            if(!check5.isChecked()) {
-                switch (rng.nextInt(6) + 1) {
-                    case 1:
-                        dice_picture4.setImageResource(R.drawable.one);
-
-                        break;
-                    case 2:
-                        dice_picture4.setImageResource(R.drawable.two);
-
-                        break;
-                    case 3:
-                        dice_picture4.setImageResource(R.drawable.three);
-
-                        break;
-                    case 4:
-                        dice_picture4.setImageResource(R.drawable.four);
-
-                        break;
-                    case 5:
-                        dice_picture4.setImageResource(R.drawable.five);
-
-                        break;
-                    case 6:
-                        dice_picture4.setImageResource(R.drawable.six);
-
-                        break;
-                    default:
-                }
-            }
-            if (dice_picture1=R.drawable.one){
-
-            }*/
+            
             rolling=false;  //user can press again
 
             return true;

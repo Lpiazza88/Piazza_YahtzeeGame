@@ -4,274 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#871313"
+    android:background="@drawable/istockphoto_1069099668_170667a"
     tools:context=".Play_Game">
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="171dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="casual"
-        android:text="Total"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Total" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="171dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="24dp"
-        android:fontFamily="casual"
-        android:text="Small Straight"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/SmStraight" />
-
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="171dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="24dp"
-        android:fontFamily="casual"
-        android:text="YAHTZEE"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LgStraight" />
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="171dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="24dp"
-        android:fontFamily="casual"
-        android:text="Chance"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Chance" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="171dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="24dp"
-        android:fontFamily="casual"
-        android:text="Large Straight"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SmStraight" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="171dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="casual"
-        android:text="3 of a Kind"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ThreeKind" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="171dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="casual"
-        android:text="Full House"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FourKind" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="171dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="casual"
-        android:text="4 of a Kind"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/FourKind" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="171dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="casual"
-        android:text="Fours"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Four" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="171dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="casual"
-        android:text="Fives"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Four" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="171dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="casual"
-        android:text="Sixes"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Five" />
-
-    <ImageView
-        android:id="@+id/Chance"
-        android:layout_width="248dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="18dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Yahtzee"
-        app:srcCompat="@android:drawable/gallery_thumb" />
-
-    <ImageView
-        android:id="@+id/Total"
-        android:layout_width="248dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="41dp"
-        android:layout_marginEnd="18dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Chance"
-        app:srcCompat="@android:drawable/gallery_thumb" />
-
-    <ImageView
-        android:id="@+id/SmStraight"
-        android:layout_width="248dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="18dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FullHouse"
-        app:srcCompat="@android:drawable/gallery_thumb" />
-
-    <ImageView
-        android:id="@+id/LgStraight"
-        android:layout_width="248dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="18dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SmStraight"
-        app:srcCompat="@android:drawable/gallery_thumb" />
-
-    <ImageView
-        android:id="@+id/Yahtzee"
-        android:layout_width="248dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="18dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21"
-        app:srcCompat="@android:drawable/gallery_thumb" />
-
-    <ImageView
-        android:id="@+id/FourKind"
-        android:layout_width="248dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="18dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ThreeKind"
-        app:srcCompat="@android:drawable/gallery_thumb" />
-
-    <ImageView
-        android:id="@+id/ThreeKind"
-        android:layout_width="248dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="18dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:srcCompat="@android:drawable/gallery_thumb" />
-
-    <ImageView
-        android:id="@+id/FullHouse"
-        android:layout_width="248dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="18dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FourKind"
-        app:srcCompat="@android:drawable/gallery_thumb" />
-
-    <ImageView
-        android:id="@+id/Four"
-        android:layout_width="248dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="18dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Three"
-        app:srcCompat="@android:drawable/gallery_thumb" />
-
-    <ImageView
-        android:id="@+id/Five"
-        android:layout_width="248dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="18dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Four"
-        app:srcCompat="@android:drawable/gallery_thumb" />
-
-    <ImageView
-        android:id="@+id/Six"
-        android:layout_width="248dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="18dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Five"
-        app:srcCompat="@android:drawable/gallery_thumb" />
 
     <ImageView
         android:id="@+id/d3"
@@ -340,6 +74,306 @@
         app:srcCompat="@drawable/dice3droll" />
 
     <ImageButton
+        android:id="@+id/TotalBtn"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="16dp"
+        android:background="#810707"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChanceBtn"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+    <ImageButton
+        android:id="@+id/TwoBtn"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="19dp"
+        android:background="#810707"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OneBtn"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+    <ImageButton
+        android:id="@+id/ThreeBtn"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="19dp"
+        android:background="#810707"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TwoBtn"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+    <ImageButton
+        android:id="@+id/FourBtn"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="19dp"
+        android:background="#810707"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ThreeBtn"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+    <ImageButton
+        android:id="@+id/FiveBtn"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="19dp"
+        android:background="#810707"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FourBtn"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+    <ImageButton
+        android:id="@+id/SixBtn"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="19dp"
+        android:background="#810707"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FiveBtn"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+    <ImageButton
+        android:id="@+id/TkBtn"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="19dp"
+        android:background="#810707"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SixBtn"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+    <ImageButton
+        android:id="@+id/FkBtn"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="19dp"
+        android:background="#810707"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TkBtn"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+    <ImageButton
+        android:id="@+id/FhBtn"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="19dp"
+        android:background="#810707"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FkBtn"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+    <ImageButton
+        android:id="@+id/LgBtn"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="19dp"
+        android:background="#810707"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SmBtn"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+    <ImageButton
+        android:id="@+id/YahBtn"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="19dp"
+        android:background="#810707"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LgBtn"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+    <ImageButton
+        android:id="@+id/ChanceBtn"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="19dp"
+        android:background="#810707"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/YahBtn"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+    <ImageButton
+        android:id="@+id/SmBtn"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="19dp"
+        android:background="#810707"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FhBtn"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+    <ImageButton
+        android:id="@+id/OneBtn"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="19dp"
+        android:background="#810707"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="128dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="casual"
+        android:text="Fives"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="132dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="casual"
+        android:text="Chance"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="524dp" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="171dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="casual"
+        android:text="Large Straight"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="435dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="171dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="casual"
+        android:text="Small Straight"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="396dp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="141dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="casual"
+        android:text="4 of a Kind"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="312dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="131dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="casual"
+        android:text="Fours"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="143dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="128dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="casual"
+        android:text="Sixes"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="226dp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="142dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="casual"
+        android:text="Total"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="600dp" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="145dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="casual"
+        android:text="3 of a Kind"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="270dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="137dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="casual"
+        android:text="Full House"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="353dp" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="130dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="casual"
+        android:text="YAHTZEE"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="482dp" />
+
+    <ImageButton
         android:id="@+id/RollBtn"
         android:layout_width="55dp"
         android:layout_height="55dp"
@@ -353,41 +387,10 @@
         app:layout_constraintTop_toBottomOf="@+id/cb5"
         app:srcCompat="@android:drawable/presence_online" />
 
-    <ImageView
-        android:id="@+id/Aces"
-        android:layout_width="248dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="18dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/gallery_thumb" />
-
-    <ImageView
-        android:id="@+id/Three"
-        android:layout_width="248dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="18dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Two"
-        app:srcCompat="@android:drawable/gallery_thumb" />
-
-    <ImageView
-        android:id="@+id/Two"
-        android:layout_width="248dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="18dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Aces"
-        app:srcCompat="@android:drawable/gallery_thumb" />
-
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="171dp"
-        android:layout_height="35dp"
+        android:layout_width="144dp"
+        android:layout_height="33dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="casual"
@@ -400,9 +403,8 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="171dp"
+        android:layout_width="131dp"
         android:layout_height="35dp"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="casual"
         android:text="Twos"
@@ -410,13 +412,12 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Aces" />
+        tools:layout_editor_absoluteY="61dp" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="171dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="132dp"
+        android:layout_height="33dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="casual"
         android:text="Threes"
@@ -424,7 +425,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Three" />
+        tools:layout_editor_absoluteY="102dp" />
 
     <CheckBox
         android:id="@+id/cb1"
@@ -432,6 +433,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="1dp"
+        android:buttonTint="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/d1" />
 
@@ -440,6 +442,7 @@
         android:layout_width="54dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
+        android:buttonTint="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/d2" />
 
@@ -449,6 +452,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="1dp"
+        android:buttonTint="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/d3" />
 
@@ -457,6 +461,7 @@
         android:layout_width="54dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
+        android:buttonTint="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/d4" />
 
@@ -465,24 +470,162 @@
         android:layout_width="54dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
+        android:buttonTint="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/d5" />
 
     <TextView
-        android:id="@+id/test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="560dp"
-        android:layout_marginEnd="282dp"
-        android:layout_marginBottom="152dp"
+        android:id="@+id/SixTtl"
+        android:layout_width="77dp"
+        android:layout_height="28dp"
+        android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="@+id/SixBtn"
+        tools:layout_editor_absoluteY="230dp" />
+
+    <TextView
+        android:id="@+id/FiveTtl"
+        android:layout_width="77dp"
+        android:layout_height="28dp"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="@+id/FiveBtn"
+        tools:layout_editor_absoluteY="188dp" />
+
+    <TextView
+        android:id="@+id/FourTtl"
+        android:layout_width="79dp"
+        android:layout_height="31dp"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView16"
+        app:layout_constraintStart_toStartOf="@+id/FourBtn"
+        tools:layout_editor_absoluteY="145dp" />
+
+    <TextView
+        android:id="@+id/ThreeTtl"
+        android:layout_width="77dp"
+        android:layout_height="28dp"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/ThreeBtn"
+        tools:layout_editor_absoluteY="102dp" />
+
+    <TextView
+        android:id="@+id/TtlTtl"
+        android:layout_width="77dp"
+        android:layout_height="28dp"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView24"
+        app:layout_constraintStart_toStartOf="@+id/TotalBtn"
+        tools:layout_editor_absoluteY="600dp" />
+
+    <TextView
+        android:id="@+id/OneTtl"
+        android:layout_width="77dp"
+        android:layout_height="28dp"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/OneBtn"
+        tools:layout_editor_absoluteY="20dp" />
+
+    <TextView
+        android:id="@+id/ChTtl"
+        android:layout_width="77dp"
+        android:layout_height="28dp"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView23"
+        app:layout_constraintStart_toStartOf="@+id/ChanceBtn"
+        tools:layout_editor_absoluteY="524dp" />
+
+    <TextView
+        android:id="@+id/YahTtl"
+        android:layout_width="77dp"
+        android:layout_height="28dp"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView20"
+        app:layout_constraintStart_toStartOf="@+id/YahBtn"
+        tools:layout_editor_absoluteY="482dp" />
+
+    <TextView
+        android:id="@+id/LgTtl"
+        android:layout_width="53dp"
+        android:layout_height="29dp"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView21"
+        app:layout_constraintStart_toStartOf="@+id/LgBtn"
+        tools:layout_editor_absoluteY="440dp" />
+
+    <TextView
+        android:id="@+id/SmTtl"
+        android:layout_width="55dp"
+        android:layout_height="29dp"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView22"
+        app:layout_constraintStart_toStartOf="@+id/SmBtn"
+        tools:layout_editor_absoluteY="396dp" />
+
+    <TextView
+        android:id="@+id/FhTtl"
+        android:layout_width="77dp"
+        android:layout_height="28dp"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView17"
+        app:layout_constraintStart_toStartOf="@+id/FhBtn"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <TextView
+        android:id="@+id/FokTtl"
+        android:layout_width="77dp"
+        android:layout_height="29dp"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView18"
+        app:layout_constraintStart_toStartOf="@+id/FkBtn"
+        tools:layout_editor_absoluteY="314dp" />
+
+    <TextView
+        android:id="@+id/TokTtl"
+        android:layout_width="77dp"
+        android:layout_height="28dp"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView19"
+        app:layout_constraintStart_toStartOf="@+id/TkBtn"
+        tools:layout_editor_absoluteY="272dp" />
+
+    <TextView
+        android:id="@+id/TwoTtl"
+        android:layout_width="77dp"
+        android:layout_height="28dp"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/TwoBtn"
+        tools:layout_editor_absoluteY="61dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
