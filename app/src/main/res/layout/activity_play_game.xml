@@ -234,6 +234,7 @@
         android:id="@+id/textView15"
         android:layout_width="128dp"
         android:layout_height="32dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="casual"
         android:text="Fives"
@@ -241,12 +242,13 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="184dp" />
+        app:layout_constraintTop_toBottomOf="@+id/FourBtn" />
 
     <TextView
         android:id="@+id/textView23"
         android:layout_width="132dp"
         android:layout_height="31dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="casual"
         android:text="Chance"
@@ -254,12 +256,13 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="524dp" />
+        app:layout_constraintTop_toBottomOf="@+id/YahBtn" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="171dp"
         android:layout_height="35dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="casual"
         android:text="Large Straight"
@@ -267,25 +270,27 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="435dp" />
+        app:layout_constraintTop_toTopOf="@+id/LgBtn" />
 
     <TextView
         android:id="@+id/textView22"
         android:layout_width="171dp"
         android:layout_height="35dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="28dp"
         android:fontFamily="casual"
         android:text="Small Straight"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="396dp" />
+        app:layout_constraintTop_toBottomOf="@+id/FhBtn" />
 
     <TextView
         android:id="@+id/textView18"
         android:layout_width="141dp"
         android:layout_height="35dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="casual"
         android:text="4 of a Kind"
@@ -293,12 +298,13 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="312dp" />
+        app:layout_constraintTop_toBottomOf="@+id/TkBtn" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="131dp"
         android:layout_height="34dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="casual"
         android:text="Fours"
@@ -306,12 +312,13 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="143dp" />
+        app:layout_constraintTop_toBottomOf="@+id/ThreeBtn" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="128dp"
         android:layout_height="32dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="casual"
         android:text="Sixes"
@@ -319,12 +326,13 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="226dp" />
+        app:layout_constraintTop_toBottomOf="@+id/FiveBtn" />
 
     <TextView
         android:id="@+id/textView24"
         android:layout_width="142dp"
         android:layout_height="28dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="casual"
         android:text="Total"
@@ -332,12 +340,13 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="600dp" />
+        app:layout_constraintTop_toTopOf="@+id/TotalBtn" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="145dp"
         android:layout_height="36dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="casual"
         android:text="3 of a Kind"
@@ -345,12 +354,13 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="270dp" />
+        app:layout_constraintTop_toBottomOf="@+id/SixBtn" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="137dp"
         android:layout_height="36dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="casual"
         android:text="Full House"
@@ -358,20 +368,21 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="353dp" />
+        app:layout_constraintTop_toBottomOf="@+id/FkBtn" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="130dp"
         android:layout_height="33dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="28dp"
         android:fontFamily="casual"
         android:text="YAHTZEE"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="482dp" />
+        app:layout_constraintTop_toBottomOf="@+id/LgBtn" />
 
     <ImageButton
         android:id="@+id/RollBtn"
@@ -405,6 +416,7 @@
         android:id="@+id/textView5"
         android:layout_width="131dp"
         android:layout_height="35dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="casual"
         android:text="Twos"
@@ -412,20 +424,21 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="61dp" />
+        app:layout_constraintTop_toTopOf="@+id/TwoBtn" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="132dp"
         android:layout_height="33dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
         android:fontFamily="casual"
         android:text="Threes"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="102dp" />
+        app:layout_constraintTop_toBottomOf="@+id/TwoBtn" />
 
     <CheckBox
         android:id="@+id/cb1"
@@ -478,154 +491,180 @@
         android:id="@+id/SixTtl"
         android:layout_width="77dp"
         android:layout_height="28dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="@+id/SixBtn"
-        tools:layout_editor_absoluteY="230dp" />
+        app:layout_constraintTop_toBottomOf="@+id/FiveBtn" />
 
     <TextView
         android:id="@+id/FiveTtl"
         android:layout_width="77dp"
         android:layout_height="28dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView15"
         app:layout_constraintStart_toStartOf="@+id/FiveBtn"
-        tools:layout_editor_absoluteY="188dp" />
+        app:layout_constraintTop_toBottomOf="@+id/FourBtn" />
 
     <TextView
         android:id="@+id/FourTtl"
         android:layout_width="79dp"
         android:layout_height="31dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView16"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="@+id/FourBtn"
-        tools:layout_editor_absoluteY="145dp" />
+        app:layout_constraintTop_toBottomOf="@+id/ThreeBtn" />
 
     <TextView
         android:id="@+id/ThreeTtl"
         android:layout_width="77dp"
         android:layout_height="28dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="@+id/ThreeBtn"
-        tools:layout_editor_absoluteY="102dp" />
+        app:layout_constraintTop_toBottomOf="@+id/TwoBtn" />
 
     <TextView
         android:id="@+id/TtlTtl"
         android:layout_width="77dp"
         android:layout_height="28dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView24"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="@+id/TotalBtn"
-        tools:layout_editor_absoluteY="600dp" />
+        app:layout_constraintTop_toTopOf="@+id/TotalBtn" />
 
     <TextView
         android:id="@+id/OneTtl"
         android:layout_width="77dp"
         android:layout_height="28dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="@+id/OneBtn"
-        tools:layout_editor_absoluteY="20dp" />
+        app:layout_constraintTop_toTopOf="@+id/OneBtn" />
 
     <TextView
         android:id="@+id/ChTtl"
-        android:layout_width="77dp"
-        android:layout_height="28dp"
+        android:layout_width="78dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView23"
+        app:layout_constraintHorizontal_bias="0.29"
         app:layout_constraintStart_toStartOf="@+id/ChanceBtn"
-        tools:layout_editor_absoluteY="524dp" />
+        app:layout_constraintTop_toBottomOf="@+id/YahBtn" />
 
     <TextView
         android:id="@+id/YahTtl"
         android:layout_width="77dp"
         android:layout_height="28dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView20"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="@+id/YahBtn"
-        tools:layout_editor_absoluteY="482dp" />
+        app:layout_constraintTop_toBottomOf="@+id/LgBtn" />
 
     <TextView
         android:id="@+id/LgTtl"
         android:layout_width="53dp"
         android:layout_height="29dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView21"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="@+id/LgBtn"
-        tools:layout_editor_absoluteY="440dp" />
+        app:layout_constraintTop_toTopOf="@+id/LgBtn" />
 
     <TextView
         android:id="@+id/SmTtl"
         android:layout_width="55dp"
         android:layout_height="29dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView22"
+        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="@+id/SmBtn"
-        tools:layout_editor_absoluteY="396dp" />
+        app:layout_constraintTop_toBottomOf="@+id/FhBtn" />
 
     <TextView
         android:id="@+id/FhTtl"
         android:layout_width="77dp"
         android:layout_height="28dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView17"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="@+id/FhBtn"
-        tools:layout_editor_absoluteY="358dp" />
+        app:layout_constraintTop_toBottomOf="@+id/FkBtn" />
 
     <TextView
         android:id="@+id/FokTtl"
         android:layout_width="77dp"
         android:layout_height="29dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView18"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="@+id/FkBtn"
-        tools:layout_editor_absoluteY="314dp" />
+        app:layout_constraintTop_toBottomOf="@+id/TkBtn" />
 
     <TextView
         android:id="@+id/TokTtl"
         android:layout_width="77dp"
         android:layout_height="28dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView19"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="@+id/TkBtn"
-        tools:layout_editor_absoluteY="272dp" />
+        app:layout_constraintTop_toBottomOf="@+id/SixBtn" />
 
     <TextView
         android:id="@+id/TwoTtl"
         android:layout_width="77dp"
         android:layout_height="28dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.341"
         app:layout_constraintStart_toStartOf="@+id/TwoBtn"
-        tools:layout_editor_absoluteY="61dp" />
+        app:layout_constraintTop_toTopOf="@+id/TwoBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

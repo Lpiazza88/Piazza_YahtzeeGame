@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -60,9 +62,30 @@ public class Play_Game extends AppCompatActivity {
     ImageView total;
     TextView totalt;
 
-    int[] images = {R.drawable.one, R.drawable.two, R.drawable.three, R.drawable.four, R.drawable.five, R.drawable.six};
-    Random rand = new Random();
+    int die[] = {R.drawable.one, R.drawable.two, R.drawable.three, R.drawable.four, R.drawable.five, R.drawable.six};
+//    Random rand = new Random();
+    int ones = R.drawable.one;
+    int random;
+    int min = 1;
+    int max = 6;
     int clicks = 1;
+
+    int tote;
+
+
+    int a;
+    int b;
+    int c;
+    int d;
+    int e;
+    int f;
+    int[] currentRolls = {a,b,c,d,e,f};
+    int onec=0;
+    int twoc=0;
+    int threec=0;
+    int fourc=0;
+    int fivec=0;
+    int sixc=0;
 
 
     @Override
@@ -128,29 +151,181 @@ public class Play_Game extends AppCompatActivity {
     //Receives message from timer to start dice roll
     Handler.Callback callback = new Handler.Callback() {
         public boolean handleMessage(Message msg) {
+
             if(!check1.isChecked()){
-                dice_picture.setImageResource(images[rand.nextInt(images.length)]);
+                random = new Random().nextInt(max-min+1)+min;
+                if(random==1){
+                    dice_picture.setImageResource(R.drawable.one);
+                    a=1;
+                }
+                else if(random==2){
+                    dice_picture.setImageResource(R.drawable.two);
+                    b=2;
+                }
+                else if(random==3){
+                    dice_picture.setImageResource(R.drawable.three);
+                    c=3;
+                }
+                else if(random==4){
+                    dice_picture.setImageResource(R.drawable.four);
+                    d=4;
+                }
+                else if(random==5){
+                    dice_picture.setImageResource(R.drawable.five);
+                   e=5;
+                }
+                else if(random==6){
+                    dice_picture.setImageResource(R.drawable.six);
+                    f=6;
+                }
             }
             if(!check2.isChecked()){
-                dice_picture1.setImageResource(images[rand.nextInt(images.length)]);
+                random = new Random().nextInt(max-min+1)+min;
+                if(random==1){
+                    dice_picture1.setImageResource(R.drawable.one);
+                    a=1;
+                }
+                else if(random==2){
+                    dice_picture1.setImageResource(R.drawable.two);
+                    b=2;
+                }
+                else if(random==3){
+                    dice_picture1.setImageResource(R.drawable.three);
+                    c=3;
+                }
+                else if(random==4){
+                    dice_picture1.setImageResource(R.drawable.four);
+                    d=4;
+                }
+                else if(random==5){
+                    dice_picture1.setImageResource(R.drawable.five);
+                    e=5;
+                }
+                else if(random==6){
+                    dice_picture1.setImageResource(R.drawable.six);
+                    f=6;
+                }
             }
             if(!check3.isChecked()){
-                dice_picture2.setImageResource(images[rand.nextInt(images.length)]);
+                random = new Random().nextInt(max-min+1)+min;
+                if(random==1){
+                    dice_picture2.setImageResource(R.drawable.one);
+                    a=1;
+                }
+                else if(random==2){
+                    dice_picture2.setImageResource(R.drawable.two);
+                    b=2;
+                }
+                else if(random==3){
+                    dice_picture2.setImageResource(R.drawable.three);
+                    c=3;
+                }
+                else if(random==4){
+                    dice_picture2.setImageResource(R.drawable.four);
+                    d=4;
+                }
+                else if(random==5){
+                    dice_picture2.setImageResource(R.drawable.five);
+                    e=5;
+                }
+                else if(random==6){
+                    dice_picture2.setImageResource(R.drawable.six);
+                    f=6;
+                }
             }
             if(!check4.isChecked()){
-                dice_picture3.setImageResource(images[rand.nextInt(images.length)]);
+                random = new Random().nextInt(max-min+1)+min;
+                if(random==1){
+                    dice_picture3.setImageResource(R.drawable.one);
+                    a=1;
+                }
+                else if(random==2){
+                    dice_picture3.setImageResource(R.drawable.two);
+                    b=2;
+                }
+                else if(random==3){
+                    dice_picture3.setImageResource(R.drawable.three);
+                    c=3;
+                }
+                else if(random==4){
+                    dice_picture3.setImageResource(R.drawable.four);
+                    d=4;
+                }
+                else if(random==5){
+                    dice_picture3.setImageResource(R.drawable.five);
+                    e=5;
+                }
+                else if(random==6){
+                    dice_picture3.setImageResource(R.drawable.six);
+                    f=6;
+                }
             }
             if(!check5.isChecked()){
-                dice_picture4.setImageResource(images[rand.nextInt(images.length)]);
+                random = new Random().nextInt(max-min+1)+min;
+                if(random==1){
+                    dice_picture4.setImageResource(R.drawable.one);
+                    a=1;
+                }
+                else if(random==2){
+                    dice_picture4.setImageResource(R.drawable.two);
+                    b=2;
+                }
+                else if(random==3){
+                    dice_picture4.setImageResource(R.drawable.three);
+                    c=3;
+                }
+                else if(random==4){
+                    dice_picture4.setImageResource(R.drawable.four);
+                    d=4;
+                }
+                else if(random==5){
+                    dice_picture4.setImageResource(R.drawable.five);
+                    e=5;
+                }
+                else if(random==6){
+                    dice_picture4.setImageResource(R.drawable.six);
+                    f=6;
+                }
             }
-
-            
             rolling=false;  //user can press again
+            count();
+            scores();
 
             return true;
         }
     };
 
+    public void count(){
+        for(int i=0; i<currentRolls.length;i++){
+            if(currentRolls[i]==1){
+                onec++;
+                onet.setText(String.valueOf(onec));
+            }
+        }
+//        for(int i=0; i<die[1];i++){
+//            twoc++;
+//            twot.setText(String.valueOf(twoc));
+//        }
+//        for(int i=0; i<die[2];i++){
+//            threec++;
+//            threet.setText(String.valueOf(threec));
+//        }
+//        for(int i=0; i<die[3];i++){
+//            fourc++;
+//            fourt.setText(String.valueOf(fourt));
+//        }
+//        for(int i=0; i<die[4];i++){
+//            fivec++;
+//            fivet.setText(String.valueOf(fivec));
+//        }
+//        for(int i=0; i<die[5];i++){
+//            sixc++;
+//            sixt.setText(String.valueOf(sixc));
+//        }
+    }
+    public void scores(){
+        totalt.setText(String.valueOf(a+b+c+d+e));
+    }
 
     //User pressed button, lets start
     private class HandleClick implements View.OnClickListener {
