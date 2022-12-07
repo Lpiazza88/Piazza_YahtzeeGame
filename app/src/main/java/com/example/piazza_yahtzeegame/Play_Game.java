@@ -79,13 +79,19 @@ public class Play_Game extends AppCompatActivity {
     int d;
     int e;
     int f;
-    int[] currentRolls = {a,b,c,d,e,f};
+    int currentRolls[] = {a,b,c,d,e,f};
     int onec=0;
     int twoc=0;
     int threec=0;
     int fourc=0;
     int fivec=0;
     int sixc=0;
+    int un;
+    int dos;
+    int tres;
+    int quatro;
+    int cinco;
+    int seis;
 
 
     @Override
@@ -156,7 +162,7 @@ public class Play_Game extends AppCompatActivity {
                 random = new Random().nextInt(max-min+1)+min;
                 if(random==1){
                     dice_picture.setImageResource(R.drawable.one);
-                    a=1;
+                    a = 1;
                 }
                 else if(random==2){
                     dice_picture.setImageResource(R.drawable.two);
@@ -179,152 +185,224 @@ public class Play_Game extends AppCompatActivity {
                     f=6;
                 }
             }
+            count1();
             if(!check2.isChecked()){
                 random = new Random().nextInt(max-min+1)+min;
                 if(random==1){
                     dice_picture1.setImageResource(R.drawable.one);
-                    a=1;
                 }
                 else if(random==2){
                     dice_picture1.setImageResource(R.drawable.two);
-                    b=2;
                 }
                 else if(random==3){
                     dice_picture1.setImageResource(R.drawable.three);
-                    c=3;
                 }
                 else if(random==4){
                     dice_picture1.setImageResource(R.drawable.four);
-                    d=4;
                 }
                 else if(random==5){
                     dice_picture1.setImageResource(R.drawable.five);
-                    e=5;
                 }
                 else if(random==6){
                     dice_picture1.setImageResource(R.drawable.six);
-                    f=6;
                 }
             }
+            count2();
             if(!check3.isChecked()){
                 random = new Random().nextInt(max-min+1)+min;
                 if(random==1){
                     dice_picture2.setImageResource(R.drawable.one);
-                    a=1;
                 }
                 else if(random==2){
                     dice_picture2.setImageResource(R.drawable.two);
-                    b=2;
                 }
                 else if(random==3){
                     dice_picture2.setImageResource(R.drawable.three);
-                    c=3;
                 }
                 else if(random==4){
                     dice_picture2.setImageResource(R.drawable.four);
-                    d=4;
                 }
                 else if(random==5){
                     dice_picture2.setImageResource(R.drawable.five);
-                    e=5;
                 }
                 else if(random==6){
                     dice_picture2.setImageResource(R.drawable.six);
-                    f=6;
                 }
             }
+            count3();
             if(!check4.isChecked()){
                 random = new Random().nextInt(max-min+1)+min;
                 if(random==1){
                     dice_picture3.setImageResource(R.drawable.one);
-                    a=1;
                 }
                 else if(random==2){
                     dice_picture3.setImageResource(R.drawable.two);
-                    b=2;
                 }
                 else if(random==3){
                     dice_picture3.setImageResource(R.drawable.three);
-                    c=3;
                 }
                 else if(random==4){
                     dice_picture3.setImageResource(R.drawable.four);
-                    d=4;
                 }
                 else if(random==5){
                     dice_picture3.setImageResource(R.drawable.five);
-                    e=5;
                 }
                 else if(random==6){
                     dice_picture3.setImageResource(R.drawable.six);
-                    f=6;
                 }
             }
+            count4();
             if(!check5.isChecked()){
                 random = new Random().nextInt(max-min+1)+min;
                 if(random==1){
                     dice_picture4.setImageResource(R.drawable.one);
-                    a=1;
                 }
                 else if(random==2){
                     dice_picture4.setImageResource(R.drawable.two);
-                    b=2;
                 }
                 else if(random==3){
                     dice_picture4.setImageResource(R.drawable.three);
-                    c=3;
                 }
                 else if(random==4){
                     dice_picture4.setImageResource(R.drawable.four);
-                    d=4;
                 }
                 else if(random==5){
                     dice_picture4.setImageResource(R.drawable.five);
-                    e=5;
                 }
                 else if(random==6){
                     dice_picture4.setImageResource(R.drawable.six);
-                    f=6;
                 }
             }
             rolling=false;  //user can press again
-            count();
+            count5();
             scores();
 
             return true;
         }
     };
 
-    public void count(){
-        for(int i=0; i<currentRolls.length;i++){
-            if(currentRolls[i]==1){
-                onec++;
+    public void count1() {
+            if (random == 1) {
+                onec = onec + 1;
                 onet.setText(String.valueOf(onec));
+            } else if (random == 2) {
+                twoc = twoc + 1 * 2;
+                twot.setText(String.valueOf(twoc));
+            } else if (random == 3) {
+                threec = threec + 1 * 3;
+                threet.setText(String.valueOf(threec));
+            } else if (random == 4) {
+                fourc = fourc + 1 * 4;
+                fourt.setText(String.valueOf(fourc));
+            } else if (random == 5) {
+                fivec = fivec + 1 * 5;
+                fivet.setText(String.valueOf(fivec));
+            } else if (random == 6) {
+                sixc = sixc + 1 * 6;
+                sixt.setText(String.valueOf(sixc));
             }
         }
-//        for(int i=0; i<die[1];i++){
-//            twoc++;
-//            twot.setText(String.valueOf(twoc));
-//        }
-//        for(int i=0; i<die[2];i++){
-//            threec++;
-//            threet.setText(String.valueOf(threec));
-//        }
-//        for(int i=0; i<die[3];i++){
-//            fourc++;
-//            fourt.setText(String.valueOf(fourt));
-//        }
-//        for(int i=0; i<die[4];i++){
-//            fivec++;
-//            fivet.setText(String.valueOf(fivec));
-//        }
-//        for(int i=0; i<die[5];i++){
-//            sixc++;
-//            sixt.setText(String.valueOf(sixc));
-//        }
-    }
+
+    public void count2() {
+            if (random == 1) {
+                onec = onec + 1;
+                onet.setText(String.valueOf(onec));
+            } else if (random == 2) {
+                twoc = twoc + 1 * 2;
+                twot.setText(String.valueOf(twoc));
+            } else if (random == 3) {
+                threec = threec + 1 * 3;
+                threet.setText(String.valueOf(threec));
+            } else if (random == 4) {
+                fourc = fourc + 1 * 4;
+                fourt.setText(String.valueOf(fourc));
+            } else if (random == 5) {
+                fivec = fivec + 1 * 5;
+                fivet.setText(String.valueOf(fivec));
+            } else if (random == 6) {
+                sixc = sixc + 1 * 6;
+                sixt.setText(String.valueOf(sixc));
+            }
+        }
+    
+        public void count3() {
+                if (random == 1) {
+                    onec = onec + 1;
+                    onet.setText(String.valueOf(onec));
+                } else if (random == 2) {
+                    twoc = twoc + 1 * 2;
+                    twot.setText(String.valueOf(twoc));
+                } else if (random == 3) {
+                    threec = threec + 1 * 3;
+                    threet.setText(String.valueOf(threec));
+                } else if (random == 4) {
+                    fourc = fourc + 1 * 4;
+                    fourt.setText(String.valueOf(fourc));
+                } else if (random == 5) {
+                    fivec = fivec + 1 * 5;
+                    fivet.setText(String.valueOf(fivec));
+                } else if (random == 6) {
+                    sixc = sixc + 1 * 6;
+                    sixt.setText(String.valueOf(sixc));
+                }
+            }
+
+    public void count4() {
+            if (random == 1) {
+                onec = onec + 1;
+                onet.setText(String.valueOf(onec));
+            }
+            else if (random == 2) {
+                twoc = twoc + 1 * 2;
+                twot.setText(String.valueOf(twoc));
+            }
+            else if (random == 3) {
+                threec = threec + 1 * 3;
+                threet.setText(String.valueOf(threec));
+            }
+            else if (random == 4) {
+                fourc = fourc + 1 * 4;
+                fourt.setText(String.valueOf(fourc));
+            }
+            else if (random == 5) {
+                fivec = fivec + 1 * 5;
+                fivet.setText(String.valueOf(fivec));
+            }
+            else if (random == 6) {
+                sixc = sixc + 1 * 6;
+                sixt.setText(String.valueOf(sixc));
+            }
+        }
+
+    public void count5() {
+            if (random == 1) {
+                onec = onec + 1;
+                onet.setText(String.valueOf(onec));
+            }
+            else if (random == 2) {
+                twoc = twoc + 1 * 2;
+                twot.setText(String.valueOf(twoc));
+            }
+            else if (random == 3) {
+                threec = threec + 1 * 3;
+                threet.setText(String.valueOf(threec));
+            }
+            else if (random == 4) {
+                fourc = fourc + 1 * 4;
+                fourt.setText(String.valueOf(fourc));
+            }
+            else if (random == 5) {
+                fivec = fivec + 1 * 5;
+                fivet.setText(String.valueOf(fivec));
+            }
+            else if (random == 6) {
+                sixc = sixc + 1 * 6;
+                sixt.setText(String.valueOf(sixc));
+            }
+        }
+
     public void scores(){
-        totalt.setText(String.valueOf(a+b+c+d+e));
+        totalt.setText(String.valueOf(onec+twoc+threec+fourc+fivec));
     }
 
     //User pressed button, lets start
